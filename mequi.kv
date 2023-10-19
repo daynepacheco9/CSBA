@@ -1,0 +1,138 @@
+<Tela>
+
+    orientation:'vertical'
+    Label:
+        text:'MÉQUI'
+        font_size: 30
+        size_hint_y: 0.30
+        color: 1,0,0,1
+    Label:
+        text: ''
+        size_hint_y: 0.10
+
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint_y: 0.15
+        Label:
+            text:'CLIENTE: '
+            font_size: 20
+        TextInput:
+            id: tx1
+            text:' '
+    Label:
+        text: ''
+        size_hint_y: 0.10
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint_y: 0.15
+        Label:
+            text: 'SELECIONE'
+        Label:
+            text:'PRODUTOS'
+        Label:
+            text:'QUANTIDADES'
+
+    GridLayout:
+        cols: 4
+        size_hint_y: 0.60
+        CheckBox:
+            id: ck1
+            color: 1,1,0,1
+        Label:
+            text:'Big Mac'
+        Label:
+            text:'R$ 14,90'
+        TextInput:
+            id: q1
+            text:''
+            color: 1,0,0,1
+        CheckBox:
+            id: ck2
+            color: 1,1,0,1
+        Label:
+            text:'Quarteirão'
+        Label:
+            text:'R$ 10,90'
+        TextInput:
+            id: q2
+            color: 1,0,0,1
+            text:'' 
+        CheckBox:
+            id: ck3
+            color: 1,1,0,1
+        Label:
+            text:'Mc Lanche Feliz'
+        Label:
+            text:'R$ 20,90'
+        TextInput:
+            id: q3
+            color: 1,0,0,1
+            text:''
+        CheckBox:
+            id: ck4
+            color: 1,1,0,1
+        Label:
+            text:'Coca Cola'
+        Label:
+            text:'R$ 7,90'
+        TextInput:
+            id: q4
+            color: 1,0,0,1
+            text:''
+        CheckBox:
+            id: ck5
+            color: 1,1,0,1
+        Label:
+            text:'Àgua mineral'
+        Label:
+            text:'R$ 5,90'
+        TextInput:
+            id: q5
+            color: 1,0,0,1
+            text:''
+        CheckBox:
+            id: ck6
+            color: 1,1,0,1
+        Label:
+            text:'Sprite'
+        Label:
+            text:'R$ 8,90'
+        TextInput:
+            id: q6
+            text:'' 
+            color: 1,0,0,1
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint_y: 0.20
+        Label:
+            text:'PRODUTO FINAL'
+
+    Label:
+        size_hint_y: 0.1
+        id: nome
+        text: ''
+
+    Label:
+        size_hint_y: 0.1
+        id: mensagem
+        text: ''
+    Label:
+        size_hint_y: 0.1
+        id:valor
+        text: ''    
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint_y: 0.15
+        Spinner:
+            id: sp1
+            text: 'PAGAMENTO'
+            values: ('ESPÉCIE','PIX','CRÉDITO','CRÉDITO 2X') 
+            on_text: root.tipos(self.text) 
+        Button:
+            id: Limpar
+            text:'Limpar'
+            on_release: root.limpar()
+        Button:
+            id: sair
+            text:'Sair'
+            on_release: root.sair()
