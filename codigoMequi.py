@@ -94,13 +94,13 @@ class Tela(BoxLayout):
         App.get_running_app().stop()
         Window.close()
 
-class MequiApp(App):
+class CodigoMequikApp(App):
     def build(self):
         
         return Tela()
 
 
-MequiApp().run()
+CodigoMequikApp().run()
     
 
 
